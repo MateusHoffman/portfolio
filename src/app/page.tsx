@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-screen bg-light max-w-full">
       <Header />
-      <main className="flex md:pt-3 items-center gap-3 flex-col">
+      <main className="flex md:pt-3 items-center gap-2 flex-col">
         <Profile />
         <About />
       </main>
