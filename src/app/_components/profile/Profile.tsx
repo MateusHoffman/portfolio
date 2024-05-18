@@ -60,9 +60,9 @@ export default function Profile() {
               Desenvolvedor Mobile | React Native, TypeScript, Git, JavaScript
             </p>
             {/* Empresa e faculdade que eu fiz (para mobile) */}
-            <p className="md:hidden text-sm font-normal leading-5 text-black text-opacity-60 pt-1">
+            {/* <p className="md:hidden text-sm font-normal leading-5 text-black text-opacity-60 pt-1">
               Muu Agrotech · Trybe
-            </p>
+            </p> */}
             {/* Minha localização e informações de contato */}
             <div>
               {/* Minha localização */}
@@ -102,7 +102,7 @@ export default function Profile() {
             </button>
           </div>
           {/* Empresa e faculdade que eu fiz (para computador)*/}
-          <div className="hidden md:block w-80 md:pt-4">
+          {/* <div className="hidden md:block w-80 md:pt-4">
             <div className="flex flex-row h-8 gap-2 mb-2">
               <img
                 src="https://media.licdn.com/dms/image/D4E0BAQGDIMF0chtozQ/company-logo_100_100/0/1691426534167?e=1724284800&v=beta&t=-TI6N0Wd9-4i2LEjWokI0QFkXmZ_v5DMbq-rStkXLaY"
@@ -121,7 +121,7 @@ export default function Profile() {
                 Trybe
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="w-full pt-4 flex gap-2">
           {/* Botão de Seguir */}
