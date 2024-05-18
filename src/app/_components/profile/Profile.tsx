@@ -39,7 +39,7 @@ export default function Profile() {
         {/* Imagem de perfil */}
         <div
           className="bg-white md:w-[21%] w-[36%] aspect-square rounded-full relative"
-          style={{ marginTop: windowSize.width <= 768 ? "-26%" : "-18%" }}
+          style={{ marginTop: windowSize.width <= 768 ? "-25%" : "-18%" }}
         >
           <img
             className="w-full h-full rounded-full p-1"
