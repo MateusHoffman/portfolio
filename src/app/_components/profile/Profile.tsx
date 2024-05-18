@@ -14,13 +14,22 @@ export default function Profile() {
     console.log("Redirecionar para o GitHub");
   }
 
+  function handleFollow() {
+    console.log("Abrir modal com vários informações importantes");
+    // Currículo, GitHub, Email, Telefone...
+  }
+
+  function handleSendMessage() {
+    console.log("Abrir modal com meios de contato");
+  }
+
   return (
-    <section className="md:w-3/5 2xl:w-5/12 w-full border-[1px] border-[#8C8C8C] border-opacity-20 rounded-xl min-h-44 bg-white">
+    <section className="md:w-3/5 2xl:w-5/12 w-full border-[1px] border-[#8C8C8C] border-opacity-20 md:rounded-xl min-h-44 bg-white">
+      {/* eslint-disable @next/next/no-img-element */}
       {/* Banner */}
       <div className="w-full rounded-xl">
-        {/* eslint-disable @next/next/no-img-element */}
         <img
-          className="w-full rounded-t-xl"
+          className="w-full md:rounded-t-xl"
           src="https://media.licdn.com/dms/image/D4D16AQHFJ8NjquWAxw/profile-displaybackgroundimage-shrink_350_1400/0/1667320641684?e=1721260800&v=beta&t=pf1t7cn-97Y17PsLCwsnRs_OGPcP5Tuy4EoaR3JX3pA"
           alt="Imagem de fundo do perfil"
         />
@@ -41,21 +50,21 @@ export default function Profile() {
         {/* Informações gerais */}
         <div className="w-full flex flex-row">
           {/* Informações pessoais */}
-          <div className="w-full md:pt-4">
+          <div className="w-full pt-4">
             {/* Nome */}
-            <h1 className="text-2xl font-semibold leading-5 text-black">
+            <h1 className="text-xl font-semibold leading-5 text-black">
               Mateus Hoffman
             </h1>
             {/* Descrição */}
-            <p className="text-md font-normal leading-5 pt-2 text-black">
+            <p className="text-md font-normal leading-5 pt-1 text-black">
               Desenvolvedor Mobile | React Native, TypeScript, Git, JavaScript
             </p>
             {/* Empresa e faculdade que eu fiz (para mobile) */}
-            <p className="md:hidden text-sm font-normal leading-5 text-black text-opacity-60 pt-2">
+            <p className="md:hidden text-sm font-normal leading-5 text-black text-opacity-60 pt-1">
               Muu Agrotech · Trybe
             </p>
             {/* Minha localização e informações de contato */}
-            <div className="pt-1">
+            <div>
               {/* Minha localização */}
               <span className="text-sm font-normal leading-5 text-black text-opacity-60">
                 Campinas, São Paulo, Brasil
@@ -114,9 +123,9 @@ export default function Profile() {
             </div>
           </div>
         </div>
-        <div className="w-full pt-4">
+        <div className="w-full pt-4 flex gap-2">
           {/* Botão de Seguir */}
-          <button className="w-24 h-8 bg-[#0a66c2] hover:bg-[#004182] rounded-3xl flex gap-1 items-center justify-center">
+          <button onClick={handleFollow}  className="w-24 px-4 bg-[#0a66c2] hover:bg-[#004182] rounded-3xl flex gap-1 items-center justify-center">
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
@@ -140,6 +149,15 @@ export default function Profile() {
 
             <span className="text-white text-base font-semibold h-full flex items-center">
               Seguir
+            </span>
+          </button>
+          {/* Botão Enviar mensagem */}
+          <button
+            onClick={handleSendMessage}
+            className="h-8 px-4 bg-white border-[1px] border-[#0a66c2] hover:border-[#004182] rounded-3xl flex gap-1 items-center justify-center"
+          >
+            <span className="text-[#0a66c2] hover:text-[#004182] text-base font-semibold h-full flex items-center">
+              Enviar mensagem
             </span>
           </button>
         </div>
