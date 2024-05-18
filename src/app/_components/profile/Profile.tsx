@@ -35,11 +35,11 @@ export default function Profile() {
         />
       </div>
       {/* Informações do perfil */}
-      <div className="p-6">
+      <div className="md:p-6 p-4">
         {/* Imagem de perfil */}
         <div
-          className="bg-white md:w-[21%] w-[35%] aspect-square rounded-full relative"
-          style={{ marginTop: windowSize.width <= 768 ? "-25%" : "-18%" }}
+          className="bg-white md:w-[21%] w-[36%] aspect-square rounded-full relative"
+          style={{ marginTop: windowSize.width <= 768 ? "-26%" : "-18%" }}
         >
           <img
             className="w-full h-full rounded-full p-1"
