@@ -1,3 +1,4 @@
+import { profileData } from "@/data/local/ProfileData";
 import React from "react";
 
 export default function GeneralInformation() {
@@ -14,17 +15,17 @@ export default function GeneralInformation() {
       <div className="w-full pt-4">
         {/* Nome */}
         <h1 className="text-xl font-semibold leading-5 text-black">
-          Mateus Hoffman
+          {profileData.name}
         </h1>
         {/* Descrição */}
         <p className="text-md font-normal leading-5 pt-1 text-black">
-          Desenvolvedor Mobile | React Native, TypeScript, Git, JavaScript
+          {profileData.description}
         </p>
         {/* Minha localização e informações de contato */}
         <div>
           {/* Minha localização */}
           <span className="text-sm font-normal leading-5 text-black text-opacity-60">
-            Campinas, São Paulo, Brasil
+            {profileData.city}, {profileData.state}, {profileData.country}
           </span>
           <span className="text-sm font-normal leading-5 text-black text-opacity-60">
             {" "}

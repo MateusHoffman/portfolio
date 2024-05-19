@@ -1,6 +1,7 @@
 import useWindowSize from "@/hook/useWindowSize";
 import React from "react";
 import ActionButtons from "./ActionButtons";
+import { profileData } from "@/data/local/ProfileData";
 
 export default function ProfilePicture() {
   const windowSize = useWindowSize();
@@ -13,7 +14,7 @@ export default function ProfilePicture() {
       >
         <img
           className="w-full h-full rounded-full p-1"
-          src="https://media.licdn.com/dms/image/C4D03AQFz4U-QOZT7nQ/profile-displayphoto-shrink_200_200/0/1662759513105?e=1721260800&v=beta&t=zL2kHEAVJSa7sTVYjSqoEqoOyijzQkK9dnd1bofwRhg"
+          src={profileData.picture}
           alt="Imagem de perfil"
         />
       </div>

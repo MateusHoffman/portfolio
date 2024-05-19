@@ -1,5 +1,6 @@
 "use client";
 
+import { aboutData } from "@/data/local/AboutData";
 import React from "react";
 
 export default function About() {
@@ -13,13 +14,7 @@ export default function About() {
         Sobre
       </h1>
       <p className="py-3 text-black text-opacity-90 text-sm leading-5 font-normal">
-        Sou um desenvolvedor pleno especializado em Front-End mobile e web, com
-        dois anos de experiência profissional. Tenho habilidades sólidas no
-        trabalho em equipe, empregando soft skills para garantir uma colaboração
-        eficaz. Minhas competências técnicas incluem desenvolvimento em
-        TypeScript e Kotlin, utilizando os frameworks React, React Native e
-        Jetpack Compose. Tenho um forte enfoque em responsividade, testes
-        unitários e otimização de desempenho.
+        {aboutData.mainText}
       </p>
       <div className="w-full flex justify-end">
         <button onClick={handleSeeMore}>
