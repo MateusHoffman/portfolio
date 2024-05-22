@@ -7,7 +7,7 @@ export default function ActionButtons() {
 
   function handleFollow() {
     setIsOpenModalFollow(true);
-    console.log("Abrir modal com vários informações importantes");
+    // console.log("Abrir modal com vários informações importantes");
     // Currículo, GitHub, Email, Telefone...
   }
 
