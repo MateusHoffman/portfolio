@@ -1,22 +1,22 @@
 export const informationData = {
   information: [
     {
-      icon: 'linkedin.png',
+      icon: 'email.png',
       name: 'Email',
       value: 'mateushoffmandev@gmail.com',
     },
     {
-      icon: 'linkedin.png',
+      icon: 'smartphone.png',
       name: 'Número de celular',
       value: '+55 19 98942-8951',
     },
     {
-      icon: 'linkedin.png',
+      icon: 'home.png',
       name: 'Endereço',
       value: 'Campinas, São Paulo, Brasil',
     },
     {
-      icon: 'linkedin.png',
+      icon: 'birth.png',
       name: 'Idade',
       value: '21 anos',
     },
