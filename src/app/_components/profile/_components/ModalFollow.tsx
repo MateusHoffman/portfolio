@@ -16,7 +16,7 @@ export default function ModalFollow(props: IProps) {
     copy(value);
     setCopied(value);
     setTimeout(() => {
-      setCopied(false);
+      setCopied('');
     }, 2000); // Reset 'copied' state after 2 seconds
   };
 
