@@ -21,7 +21,7 @@ export default function ActionButtons() {
         {/* Botão de Seguir */}
         <button
           onClick={handleFollow}
-          className="w-24 px-4 bg-[#0a66c2] hover:bg-[#004182] rounded-3xl flex gap-1 items-center justify-center"
+          className="h-8 w-24 px-4 bg-[#0a66c2] hover:bg-[#004182] rounded-3xl flex gap-1 items-center justify-center"
         >
           <svg
             version="1.0"

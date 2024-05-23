@@ -18,7 +18,7 @@ export default function ProfilePicture() {
           alt="Imagem de perfil"
         />
       </div>
-      <div className="hidden md:flex md:w-2/5 justify-end">
+      <div className="hidden md:flex justify-end">
         <ActionButtons />
       </div>
     </div>
