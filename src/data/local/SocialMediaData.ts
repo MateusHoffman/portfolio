@@ -16,7 +16,7 @@ export const socialMediaData = {
       logo: 'instagram.png',
       name: 'Instagram',
       link: 'https://www.instagram.com/maahoffman/',
-      showLink: 'instagram.com/maahoffman/',
+      showLink: 'instagram.com/maahoffman',
     },
   ]
 }
