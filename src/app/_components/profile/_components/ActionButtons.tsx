@@ -1,18 +1,17 @@
-import Modal from "@/components/modal/Modal";
 import React, { useState } from "react";
 import ModalFollow from "./ModalFollow";
+import ModalSendMessage from "./ModalSendMessage";
 
 export default function ActionButtons() {
   const [isOpenModalFollow, setIsOpenModalFollow] = useState(false);
+  const [isOpenModalSendMessage, setIsOpenModalSendMessage] = useState(false);
 
   function handleFollow() {
     setIsOpenModalFollow(true);
-    // console.log("Abrir modal com vários informações importantes");
-    // Currículo, GitHub, Email, Telefone...
   }
-
+  
   function handleSendMessage() {
-    console.log("Abrir modal com meios de contato");
+    setIsOpenModalSendMessage(true);
   }
 
   return (
@@ -61,6 +60,10 @@ export default function ActionButtons() {
       <ModalFollow
         isOpen={isOpenModalFollow}
         setIsOpen={setIsOpenModalFollow}
+      />
+      <ModalSendMessage
+        isOpen={isOpenModalSendMessage}
+        setIsOpen={setIsOpenModalSendMessage}
       />
     </>
   );
