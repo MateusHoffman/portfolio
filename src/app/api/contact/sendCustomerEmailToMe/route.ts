@@ -9,8 +9,8 @@ export async function POST(request: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: process.env.MY_EMAIL,
-        pass: process.env.PASS_APP,
+        user: "mateushoffmandev@gmail.com",
+        pass: "xtsc zwwh euqf ilwt",
       },
     });
 
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 
     const mailOptions = {
       from: email,
-      to: process.env.MY_EMAIL,
+      to: "mateushoffmandev@gmail.com",
       subject: subject,
       html: emailContent.html,
     };
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail(mailOptions);
 
     await fetch(
-      "http://localhost:3000/api/contact/sendResponseEmailToCustomer",
+      "https://portfolio-hoffman.vercel.app/api/contact/sendResponseEmailToCustomer",
       {
         method: "POST",
         body: JSON.stringify({
