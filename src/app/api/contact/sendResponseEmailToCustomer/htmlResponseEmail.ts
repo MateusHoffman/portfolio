@@ -9,7 +9,7 @@ const CONTACT_MESSAGE_FIELDS: Record<keyof IResponseEmail, string> = {
 };
 
 export const generateHtmlResponseEmail = () => {
-  const entries = Object.entries({email: "mateushoffmandev@gmail.com", smartphone: "+55 19 989428951"}) as [keyof IResponseEmail, string][];
+  const entries = Object.entries({email: process.env.MY_EMAIL, smartphone: "+55 19 989428951"}) as [keyof IResponseEmail, string][];
 
   const stringData = entries.map(([key, val]) => `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`).join("");
   const htmlData = entries.map(([key, val]) => `<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`).join("");
