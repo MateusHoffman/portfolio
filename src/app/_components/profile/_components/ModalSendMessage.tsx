@@ -1,5 +1,6 @@
+import { delay } from "@/app/util/util";
 import Modal from "@/components/modal/Modal";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface IProps {
   isOpen: boolean;
@@ -19,7 +20,8 @@ export default function ModalSendMessage(props: IProps) {
     // TODO: Enviar os dados para o meu email
 
     try {
-      const response = await fetch("/src/app/sendEmail", {
+      setLoading(true)
+      const response = await fetch("/api/contact/sendCustomerEmailToMe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,6 +42,15 @@ export default function ModalSendMessage(props: IProps) {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    (async () => {
+      if (success === "Mensagem enviada com sucesso!") {
+        await delay(2000)
+        props.setIsOpen(false)
+      }
+    })()
+  }, [success, props])
 
   return (
     <Modal
