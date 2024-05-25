@@ -23,6 +23,7 @@ export async function POST(request: NextRequest) {
       html: emailContent.html,
     };
 
+    console.log('mailOptions: ', mailOptions);
     await transporter.sendMail(mailOptions);
 
     await fetch(
