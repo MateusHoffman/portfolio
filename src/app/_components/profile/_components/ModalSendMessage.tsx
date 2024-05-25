@@ -48,6 +48,9 @@ export default function ModalSendMessage(props: IProps) {
       if (success === "Mensagem enviada com sucesso!") {
         await delay(2000)
         props.setIsOpen(false)
+        setLoading(false);
+        setError("");
+        setSuccess("");
       }
     })()
   }, [success, props])
