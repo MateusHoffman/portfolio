@@ -13,15 +13,15 @@ export async function POST(request: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: process.env.MY_EMAIL,
-        pass: process.env.PASS_APP,
+        user: process.env."mateushoffmandev@gmail.com",
+        pass: process.env."xtsc zwwh euqf ilwt",
       },
     });
 
     const emailContent = generateHtmlResponseEmail();
 
     const mailOptions = {
-      from: process.env.MY_EMAIL,
+      from: process.env."mateushoffmandev@gmail.com",
       to: email,
       subject: 'Agradeço pelo contato e responderei em breve.',
       html: emailContent.html,
