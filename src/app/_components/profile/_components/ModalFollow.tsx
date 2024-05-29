@@ -1,8 +1,9 @@
 import Modal from "@/components/modal/Modal";
-import { informationData } from "@/data/local/InformationData";
-import { socialMediaData } from "@/data/local/SocialMediaData";
 import copy from "copy-to-clipboard";
+import Image from "next/image";
 import React, { useState } from "react";
+import { socialMediaData } from "../../../../../public/SocialMediaData";
+import { informationData } from "@/data/local/InformationData";
 
 interface IProps {
   isOpen: boolean;
@@ -10,13 +11,13 @@ interface IProps {
 }
 
 export default function ModalFollow(props: IProps) {
-  const [copied, setCopied] = useState('');
+  const [copied, setCopied] = useState("");
 
   const handleClickValue = (value: string) => {
     copy(value);
     setCopied(value);
     setTimeout(() => {
-      setCopied('');
+      setCopied("");
     }, 2000); // Reset 'copied' state after 2 seconds
   };
 
@@ -28,7 +29,12 @@ export default function ModalFollow(props: IProps) {
         {socialMediaData.socialMedia.map((socialMedia) => (
           <div key={socialMedia.name} className="flex gap-5">
             <div className="w-6">
-              <img src={socialMedia.logo} alt="Logo" />
+              <Image
+                src={socialMedia.logo}
+                alt="Logo"
+                width={24}
+                height={24}
+              />
             </div>
             <div>
               <p className="text-[#000000e6] font-semibold text-base">
@@ -49,7 +55,12 @@ export default function ModalFollow(props: IProps) {
         {informationData.information.map((information) => (
           <div key={information.name} className="flex gap-5">
             <div className="w-6">
-              <img src={information.icon} alt="Icon" />
+              <Image
+                src={information.icon}
+                alt="Icon"
+                width={50}
+                height={50}
+              />
             </div>
             <div>
               <p className="text-[#000000e6] font-semibold text-base">
