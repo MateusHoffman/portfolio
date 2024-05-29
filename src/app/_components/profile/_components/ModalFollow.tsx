@@ -44,7 +44,7 @@ export default function ModalFollow(props: IProps) {
               </p>
               <a
                 href={socialMedia.link}
-                className="text-[#0a66c2] font-semibold text-sm"
+                className="text-[#0a66c2] font-semibold text-base"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,7 +71,7 @@ export default function ModalFollow(props: IProps) {
                 {information.name}
               </p>
               <p
-                className="text-[#0a66c2] font-semibold text-sm cursor-pointer"
+                className="text-[#0a66c2] font-semibold text-base cursor-pointer"
                 onClick={() => handleClickValue(information.value)}
               >
                 {copied === information.value ? "Copiado!" : information.value}

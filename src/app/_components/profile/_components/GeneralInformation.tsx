@@ -28,16 +28,16 @@ export default function GeneralInformation() {
           {/* Minha localização e informações de contato */}
           <div>
             {/* Minha localização */}
-            <span className="text-sm font-normal leading-5 text-black text-opacity-60">
+            <span className="text-base font-normal leading-5 text-black text-opacity-60">
               {profileData.city}, {profileData.state}, {profileData.country}
             </span>
-            <span className="text-sm font-normal leading-5 text-black text-opacity-60">
+            <span className="text-base font-normal leading-5 text-black text-opacity-60">
               {" "}
               ·{" "}
             </span>
             {/* Informações de contato */}
             <button onClick={handleContactInformation}>
-              <span className="text-sm font-semibold leading-5 text-[#0a66c2] hover:underline">
+              <span className="text-base font-semibold leading-5 text-[#0a66c2] hover:underline">
                 Informações de contato
               </span>
             </button>

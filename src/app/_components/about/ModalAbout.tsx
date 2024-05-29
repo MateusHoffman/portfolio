@@ -11,7 +11,7 @@ export default function ModalAbout(props: IProps) {
   return (
     <Modal isOpen={props.isOpen} setIsOpen={props.setIsOpen} title="Sobre">
       <div>
-        <p className="text-black text-opacity-90 text-sm leading-5 font-normal">
+        <p className="text-black text-opacity-90 text-base leading-5 font-normal">
           {aboutData.mainText}
         </p>
       </div>

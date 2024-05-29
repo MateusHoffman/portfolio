@@ -30,10 +30,10 @@ export default function Experience() {
               <span className="text-[#000006] text-base font-semibold leading-5">
                 MUU Agrotech
               </span>
-              <span className="text-[#000006] text-sm font-normal leading-5">
+              <span className="text-[#000006] text-base font-normal leading-5">
                 Tempo integral · 1 ano e 3 meses
               </span>
-              <span className="text-[#00000099] text-sm font-normal leading-5">
+              <span className="text-[#00000099] text-base font-normal leading-5">
                 São Paulo, São Paulo, Brasil · Remota
               </span>
             </div>
@@ -45,7 +45,7 @@ export default function Experience() {
                   <h1 className="text-base text-[#000000e6] leading-5 font-semibold">
                     Desenvolvedor de aplicativos móveis Pleno
                   </h1>
-                  <span className="text-sm text-[#00000099] leading-5 font-normal">
+                  <span className="text-base text-[#00000099] leading-5 font-normal">
                     jul de 2023 - o momento · 11 meses
                   </span>
                 </div>
@@ -59,7 +59,7 @@ export default function Experience() {
                     className="absolute right-0 bottom-[0.65rem] pl-2 bg-white"
                     onClick={handleSeeMore}
                   >
-                    <span className="text-black text-opacity-60 text-sm leading-5 font-normal">
+                    <span className="text-black text-opacity-60 text-base leading-5 font-normal">
                       Ver mais ...
                     </span>
                   </button>
@@ -72,7 +72,7 @@ export default function Experience() {
                   <h1 className="text-base text-[#000000e6] leading-5 font-semibold">
                     Desenvolvedor Full-Stack Júnior
                   </h1>
-                  <span className="text-sm text-[#00000099] leading-5 font-normal">
+                  <span className="text-base text-[#00000099] leading-5 font-normal">
                     mar de 2023 - jun de 2023 · 4 meses
                   </span>
                 </div>
@@ -86,7 +86,7 @@ export default function Experience() {
                     className="absolute right-0 bottom-[0.65rem] pl-2 bg-white"
                     onClick={handleSeeMore}
                   >
-                    <span className="text-black text-opacity-60 text-sm leading-5 font-normal">
+                    <span className="text-black text-opacity-60 text-base leading-5 font-normal">
                       Ver mais ...
                     </span>
                   </button>
@@ -111,10 +111,10 @@ export default function Experience() {
               <span className="text-[#000006] text-base font-semibold leading-5">
                 Freelancer
               </span>
-              <span className="text-[#000006] text-sm font-normal leading-5">
+              <span className="text-[#000006] text-base font-normal leading-5">
                 Freelancer · 2 ano e 10 meses
               </span>
-              <span className="text-[#00000099] text-sm font-normal leading-5">
+              <span className="text-[#00000099] text-base font-normal leading-5">
                 Brasil · Remota
               </span>
             </div>
@@ -126,7 +126,7 @@ export default function Experience() {
                   <h1 className="text-base text-[#000000e6] leading-5 font-semibold">
                     Desenvolvedor Web
                   </h1>
-                  <span className="text-sm text-[#00000099] leading-5 font-normal">
+                  <span className="text-base text-[#00000099] leading-5 font-normal">
                     ago de 2021 - o momento · 2 anos e 10 meses
                   </span>
                 </div>
@@ -141,7 +141,7 @@ export default function Experience() {
                     className="absolute -right-0 bottom-[0.65rem] pl-2 bg-white"
                     onClick={handleSeeMore}
                   >
-                    <span className="text-black text-opacity-60 text-sm leading-5 font-normal">
+                    <span className="text-black text-opacity-60 text-base leading-5 font-normal">
                       Ver mais ...
                     </span>
                   </button>
@@ -154,7 +154,7 @@ export default function Experience() {
       {/* Botão "Ver mais..." */}
       <div className="w-full flex justify-end">
         <button onClick={handleSeeMore}>
-          <span className="text-black text-opacity-60 text-sm leading-5 font-normal">
+          <span className="text-black text-opacity-60 text-base leading-5 font-normal">
             Ver mais...
           </span>
         </button>
