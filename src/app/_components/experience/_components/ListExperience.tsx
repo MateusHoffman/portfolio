@@ -1,7 +1,7 @@
 import React from "react";
 
 interface IProps {
-  modal: boolean;
+  modal?: boolean;
   handleSeeMore: () => void;
 }
 

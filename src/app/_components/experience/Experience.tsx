@@ -33,6 +33,7 @@ export default function Experience() {
       <ModalExperience
         isOpen={isOpenModalExperience}
         setIsOpen={setIsOpenModalExperience}
+        handleSeeMore={handleSeeMore}
       />
     </>
   );
