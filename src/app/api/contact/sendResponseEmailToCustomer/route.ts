@@ -13,21 +13,20 @@ export async function POST(request: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user:  "mateushoffmandev@gmail.com",
-        pass: "xtsc zwwh euqf ilwt",
+        user:  process.env.NEXT_PUBLIC_MY_EMAIL,
+        pass: process.env.NEXT_PUBLIC_PASS_APP,
       },
     });
 
     const emailContent = generateHtmlResponseEmail();
 
     const mailOptions = {
-      from:  "mateushoffmandev@gmail.com",
+      from: process.env.NEXT_PUBLIC_MY_EMAIL,
       to: email,
       subject: 'Agradeço pelo contato e responderei em breve.',
       html: emailContent.html,
     };
 
-    console.log('mailOptions: ', mailOptions);
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
   } catch (error) {

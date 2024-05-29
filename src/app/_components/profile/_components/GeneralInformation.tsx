@@ -7,7 +7,6 @@ export default function GeneralInformation() {
 
   function handleContactInformation() {
     setIsOpenModalFollow(true);
-    // console.log("Abrir modal com as informações de contato");
   }
 
   function handleMyProjectsOnGithub() {

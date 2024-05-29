@@ -3,7 +3,7 @@ export const informationData = {
     {
       icon: 'email.png',
       name: 'Email',
-      value: 'mateushoffmandev@gmail.com',
+      value: process.env.NEXT_PUBLIC_MY_EMAIL || '',
     },
     {
       icon: 'smartphone.png',

@@ -6,28 +6,34 @@ export async function POST(request: NextRequest) {
   try {
     const { email, subject, message }: ICustomerEmail = await request.json();
 
+    // Create transporter with Nodemailer
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: "mateushoffmandev@gmail.com",
-        pass: "xtsc zwwh euqf ilwt",
+        user: process.env.NEXT_PUBLIC_MY_EMAIL,
+        pass: process.env.NEXT_PUBLIC_PASS_APP,
       },
     });
 
+    // Generate HTML content for the email
     const emailContent = generateHtmlCustomerEmail({ email, subject, message });
 
+    // Setup mail options
     const mailOptions = {
       from: email,
-      to: "mateushoffmandev@gmail.com",
+      to: process.env.NEXT_PUBLIC_MY_EMAIL,
       subject: subject,
       html: emailContent.html,
     };
 
-    console.log('mailOptions: ', mailOptions);
+    // Send email
     await transporter.sendMail(mailOptions);
 
-    await fetch(
-      "https://portfolio-hoffman.vercel.app/api/contact/sendResponseEmailToCustomer",
+    // Uncomment the following code to send response email to customer
+
+    // Send response email to customer
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API}/api/contact/sendResponseEmailToCustomer`,
       {
         method: "POST",
         body: JSON.stringify({
@@ -39,8 +45,15 @@ export async function POST(request: NextRequest) {
       }
     );
 
+    // Check if the response was successful
+    if (!response.ok) {
+      throw new Error("Failed to send response email to customer");
+    }
+
+    // Return success response
     return NextResponse.json({ success: true });
   } catch (error) {
+    console.error("Error:", error);
     return NextResponse.json(
       {
         success: false,
