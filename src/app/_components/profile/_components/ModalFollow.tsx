@@ -32,8 +32,10 @@ export default function ModalFollow(props: IProps) {
               <Image
                 src={socialMedia.logo}
                 alt="Logo"
-                width={24}
-                height={24}
+                width={50}
+                height={50}
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Crect width='100%25' height='100%25' fill='%23a9a9a9'/%3E%3C/svg%3E"
               />
             </div>
             <div>
@@ -60,6 +62,8 @@ export default function ModalFollow(props: IProps) {
                 alt="Icon"
                 width={50}
                 height={50}
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Crect width='100%25' height='100%25' fill='%23a9a9a9'/%3E%3C/svg%3E"
               />
             </div>
             <div>
