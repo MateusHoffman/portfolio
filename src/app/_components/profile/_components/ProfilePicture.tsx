@@ -9,7 +9,7 @@ export default function ProfilePicture() {
     <div className="flex justify-between">
       {/* eslint-disable @next/next/no-img-element */}
       <div
-        className="bg-white md:w-[21%] w-[36%] md:h-[21%] h-[36%] aspect-square rounded-full relative"
+        className="bg-white md:w-[21%] w-[32%] md:h-[21%] h-[36%] aspect-square rounded-full relative"
         style={{ marginTop: windowSize.width <= 768 ? "-25%" : "-18%" }}
       >
         <img
