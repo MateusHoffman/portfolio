@@ -3,13 +3,31 @@
 import { aboutData } from "@/data/local/AboutData";
 import React, { useState } from "react";
 import ModalAbout from "./ModalAbout";
+import { boldWordsInText } from "@/app/util/format";
 
 export default function About() {
   const [isOpenModalAbout, setIsOpenModalAbout] = useState(false);
 
   function handleSeeMore() {
-    setIsOpenModalAbout(true)
+    setIsOpenModalAbout(true);
   }
+
+  const wordsToBold = [
+    "Front-End",
+    "mobile",
+    "web",
+    "dois anos",
+    "soft skills",
+    "JavaScript",
+    "TypeScript",
+    "Kotlin",
+    "React",
+    "Native",
+    "Jetpack Compose",
+    "responsividade",
+    "testes",
+    "desempenho",
+  ];
 
   return (
     <>
@@ -17,9 +35,10 @@ export default function About() {
         <h1 className="text-black text-opacity-90 text-xl font-semibold leading-5">
           Sobre
         </h1>
-        <p className="py-3 text-black text-opacity-90 text-base leading-5 font-normal">
-          {aboutData.mainText}
-        </p>
+        <p
+          className="py-3 text-black text-opacity-90 text-base leading-5 font-normal"
+          dangerouslySetInnerHTML={{ __html: boldWordsInText(aboutData.mainText, wordsToBold) }}
+        />
         <div className="w-full flex justify-end">
           <button onClick={handleSeeMore}>
             <span className="text-black text-opacity-60 text-base leading-5 font-normal">
