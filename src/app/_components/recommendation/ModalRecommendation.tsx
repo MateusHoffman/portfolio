@@ -13,7 +13,7 @@ export default function ModalRecommendation({
 }: IProps) {
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen} title="Recomendações">
-      <ListRecommendations />
+      <ListRecommendations modal={true} />
     </Modal>
   );
 }

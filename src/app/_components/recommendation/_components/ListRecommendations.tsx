@@ -2,7 +2,11 @@ import { cleanURL } from "@/app/util/format";
 import { recommendationData } from "@/data/local/RecommendationData";
 import React from "react";
 
-export default function ListRecommendations() {
+interface IProps {
+  modal?: boolean;
+}
+
+export default function ListRecommendations({modal = false}: IProps) {
   return (
     <>
       {recommendationData.recommendations.map((recommendation, index) => (
@@ -37,7 +41,9 @@ export default function ListRecommendations() {
               </div>
               <div className="pt-3">
                 <span
-                  className={`text-base text-[#000000e6] leading-5 font-normal line-clamp-5`}
+                  className={`text-base text-[#000000e6] leading-5 font-normal ${
+                    modal ? "" : "line-clamp-5"
+                  }`}
                   style={{ whiteSpace: "pre-line" }}
                 >
                   {recommendation.message}
