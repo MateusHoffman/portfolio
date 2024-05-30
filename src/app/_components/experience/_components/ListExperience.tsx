@@ -58,6 +58,7 @@ export default function ListExperience({
                       className={`text-base text-[#000000e6] leading-5 font-normal ${
                         modal ? "" : "line-clamp-2"
                       }`}
+                      style={{ whiteSpace: "pre-line" }}
                     >
                       {position.description}
                     </span>
