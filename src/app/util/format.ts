@@ -82,6 +82,5 @@ export const formatTextWithLineBreaks = (text: string): React.ReactNode[] => {
     }
   });
 
-  console.log('elements: ', elements);
   return elements;
 };
