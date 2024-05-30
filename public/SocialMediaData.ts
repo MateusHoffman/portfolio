@@ -1,6 +1,12 @@
 export const socialMediaData = {
   socialMedia: [
     {
+      logo: '/resume.png',
+      name: 'Currículo',
+      link: '/resume',
+      showLink: 'hoffman.com/curriculo.pdf',
+    },
+    {
       logo: '/linkedin.png',
       name: 'LinkedIn',
       link: 'https://www.linkedin.com/in/mateushoffman/',
