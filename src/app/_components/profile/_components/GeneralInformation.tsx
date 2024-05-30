@@ -9,10 +9,6 @@ export default function GeneralInformation() {
     setIsOpenModalFollow(true);
   }
 
-  function handleMyProjectsOnGithub() {
-    console.log("Redirecionar para o GitHub");
-  }
-
   return (
     <>
       <div className="w-full flex flex-row">
