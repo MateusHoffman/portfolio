@@ -1,5 +1,6 @@
 import { Experience } from "@/data/local/ExperienceData";
 import moment from "moment";
+import React from "react";
 
 export function formatDateRange(date1: string, date2: string): string {
   const start = moment(date1, "DD/MM/YYYY");
@@ -68,3 +69,19 @@ export function cleanURL(url: string): string {
 
   return cleanURL;
 }
+
+export const formatTextWithLineBreaks = (text: string): React.ReactNode[] => {
+  const formattedText = text.split("\n");
+  const elements: React.ReactNode[] = [];
+
+  formattedText.forEach((line, index) => {
+    elements.push(React.createElement(React.Fragment, { key: index }, line));
+
+    if (index < formattedText.length - 1) {
+      elements.push(React.createElement("br", { key: `br-${index}` }));
+    }
+  });
+
+  console.log('elements: ', elements);
+  return elements;
+};
