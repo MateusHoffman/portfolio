@@ -47,7 +47,7 @@ export const experienceData: ExperienceData = {
           title: "Desenvolvedor de aplicativos móveis Pleno",
           startDate: "13/07/2023",
           endDate: moment().format("DD/MM/YYYY"),
-          description: `Participei do desenvolvimento do aplicativo Muu Biometria, onde integrei uma câmera com inteligência artificial para reconhecimento biométrico e implementei um mapa para cadastrar pastos em uma fazenda. Também contribuí para o aplicativo Muu Cargo, implementando um mapa com rotas otimizadas para minimizar o tempo de viagem e reduzir o impacto nos animais.
+          description: `Participei do desenvolvimento do app Muu Biometria, onde integrei uma câmera com inteligência artificial para reconhecimento biométrico e implementei uma funcionalidade de mapeamento para o cadastro de pastos. Também contribuí para o aplicativo Muu Cargo, implementando um mapa com rotas otimizadas para minimizar o tempo de viagem e reduzir o impacto nos animais, todos os apps seguem o paradigma "offline first".
           \nHabilidades usadas: Git, TypeScript, React Native, Realm...`,
         },
         {
