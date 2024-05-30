@@ -27,7 +27,7 @@ export default function Experience() {
         <footer className="px-4 md:px-6 py-2 border-t-[1px] border-t-[#8C8C8C] border-opacity-20 hover:bg-[#8c8c8c1a]">
           <button onClick={handleSeeMore} className="w-full text-center">
             <span className="text-base text-[#000000BF] font-semibold">
-              Ver tudo...
+              Ver mais...
             </span>
           </button>
         </footer>
