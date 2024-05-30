@@ -1,9 +1,24 @@
+import { useState } from "react";
 import Modal from "@/components/modal/Modal";
 import copy from "copy-to-clipboard";
 import Image from "next/image";
-import React, { useState } from "react";
 import { socialMediaData } from "../../../../../public/SocialMediaData";
 import { informationData } from "@/data/local/InformationData";
+import { downloadPDF } from "@/app/util/util";
+import { useRouter } from "next/router";
+
+interface ISocialMedia {
+  logo: string;
+  name: string;
+  link: string;
+  showLink: string;
+}
+
+interface IInformation {
+  icon: string;
+  name: string;
+  value: string;
+}
 
 interface IProps {
   isOpen: boolean;
@@ -21,12 +36,20 @@ export default function ModalFollow(props: IProps) {
     }, 2000); // Reset 'copied' state after 2 seconds
   };
 
+  const handleLinkClick = (link: string) => {
+    if (link.includes(".pdf")) {
+      downloadPDF(
+        "/mateus_hoffman_curriculo.pdf",
+        "mateus_hoffman_curriculo.pdf"
+      );
+    }
+  };
+
   return (
     <Modal isOpen={props.isOpen} setIsOpen={props.setIsOpen} title="Seguir">
-      {/* eslint-disable @next/next/no-img-element */}
       <div className="flex flex-col gap-4">
         <h1 className="text-[#000000e6] font-normal text-xl">Mídias Sociais</h1>
-        {socialMediaData.socialMedia.map((socialMedia) => (
+        {socialMediaData.socialMedia.map((socialMedia: ISocialMedia) => (
           <div key={socialMedia.name} className="flex gap-5">
             <div className="w-6">
               <Image
@@ -47,6 +70,7 @@ export default function ModalFollow(props: IProps) {
                 className="text-[#0a66c2] font-semibold text-base"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleLinkClick(socialMedia.showLink)}
               >
                 {socialMedia.showLink}
               </a>
@@ -54,7 +78,7 @@ export default function ModalFollow(props: IProps) {
           </div>
         ))}
         <h1 className="text-[#000000e6] font-normal text-xl">Informações</h1>
-        {informationData.information.map((information) => (
+        {informationData.information.map((information: IInformation) => (
           <div key={information.name} className="flex gap-5">
             <div className="w-6">
               <Image
