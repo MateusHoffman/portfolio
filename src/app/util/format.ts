@@ -48,3 +48,11 @@ export function formatTxtLocation(experience: Experience): string {
     .filter(Boolean)
     .join(", ");
 }
+
+export function boldWordsInText(text: string, wordsToBold: string[]): string {
+  const boldedText = text.replace(
+    new RegExp(wordsToBold.join("|"), "gi"),
+    (matched) => `<span class="font-semibold">${matched}</span>`
+  );
+  return boldedText;
+}
