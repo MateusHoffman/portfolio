@@ -56,3 +56,15 @@ export function boldWordsInText(text: string, wordsToBold: string[]): string {
   );
   return boldedText;
 }
+
+export function cleanURL(url: string): string {
+  // Remove initial part
+  let cleanURL = url.replace(/^https?:\/\/(www\.)?/, "");
+
+  // Remove trailing slash if exists
+  if (cleanURL.endsWith("/")) {
+    cleanURL = cleanURL.slice(0, -1);
+  }
+
+  return cleanURL;
+}
