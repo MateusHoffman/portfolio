@@ -1,6 +1,6 @@
 import { Experience } from "@/data/local/ExperienceData";
-import moment from 'moment';
-import 'moment/locale/pt-br';
+import moment from "moment";
+import "moment/locale/pt-br";
 import React from "react";
 
 export function formatDateRange(date1: string, date2: string): string {
@@ -41,14 +41,14 @@ export function formatDate(date: string): string {
 }
 
 export function formatDateInFull(dateStr: string) {
-    // Configura o Moment para usar o local "pt-br"
-    moment.locale('pt-br');
+  // Configura o Moment para usar o local "pt-br"
+  moment.locale("pt-br");
 
-    // Converte a string em uma data do Moment
-    const date = moment(dateStr, 'DD/MM/YYYY');
-  
-    // Retorna a data formatada por extenso
-    return date.format('DD [de] MMMM [de] YYYY');
+  // Converte a string em uma data do Moment
+  const date = moment(dateStr, "DD/MM/YYYY");
+
+  // Retorna a data formatada por extenso
+  return date.format("DD [de] MMMM [de] YYYY");
 }
 
 export function formatTxtLocation(experience: Experience): string {
@@ -96,3 +96,9 @@ export const formatTextWithLineBreaks = (text: string): React.ReactNode[] => {
 
   return elements;
 };
+
+export function truncateText(text: string, maxLength: number): string {
+  return text.length > maxLength
+    ? text.substring(0, maxLength - 3) + "..."
+    : text;
+}
