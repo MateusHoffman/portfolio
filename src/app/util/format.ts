@@ -1,5 +1,6 @@
 import { Experience } from "@/data/local/ExperienceData";
-import moment from "moment";
+import moment from 'moment';
+import 'moment/locale/pt-br';
 import React from "react";
 
 export function formatDateRange(date1: string, date2: string): string {
@@ -37,6 +38,17 @@ export function formatDate(date: string): string {
     const year = targetDate.format("YYYY");
     return `${month} de ${year}`;
   }
+}
+
+export function formatDateInFull(dateStr: string) {
+    // Configura o Moment para usar o local "pt-br"
+    moment.locale('pt-br');
+
+    // Converte a string em uma data do Moment
+    const date = moment(dateStr, 'DD/MM/YYYY');
+  
+    // Retorna a data formatada por extenso
+    return date.format('DD [de] MMMM [de] YYYY');
 }
 
 export function formatTxtLocation(experience: Experience): string {
