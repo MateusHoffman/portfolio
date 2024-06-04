@@ -1,4 +1,4 @@
-import { cleanURL, formatDateInFull } from "@/app/util/format";
+import { cleanURL, formatDateInFull, truncateText } from "@/app/util/format";
 import { recommendationData } from "@/data/local/RecommendationData";
 import React from "react";
 
@@ -25,7 +25,7 @@ export default function ListRecommendations({modal = false}: IProps) {
             <div className="w-full">
               <div className="flex flex-col">
                 <span className="text-base leading-5 line-clamp-1 flex justify-between">
-                  <span className="font-semibold text-[#000006]">{recommendation.name}</span>
+                  <span className="font-semibold text-[#000006]">{truncateText(recommendation.name, 15)}</span>
                   <span className="font-normal text-[#00000099]">{formatDateInFull(recommendation.date)}</span>
                 </span>
                 <span className="text-[#000006] text-base font-normal leading-5 line-clamp-1">
