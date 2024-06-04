@@ -1,4 +1,4 @@
-import { cleanURL } from "@/app/util/format";
+import { cleanURL, formatDateInFull } from "@/app/util/format";
 import { recommendationData } from "@/data/local/RecommendationData";
 import React from "react";
 
@@ -9,7 +9,7 @@ interface IProps {
 export default function ListRecommendations({modal = false}: IProps) {
   return (
     <>
-      {recommendationData.recommendations.map((recommendation, index) => (
+      {(modal ? recommendationData.recommendations : recommendationData.recommendations.slice(0, 2)).map((recommendation, index) => (
         <div key={recommendation.id}>
           {index !== 0 && (
             <div className="h-px w-full bg-[#8C8C8C] bg-opacity-20" />
@@ -24,8 +24,9 @@ export default function ListRecommendations({modal = false}: IProps) {
             </div>
             <div className="w-full">
               <div className="flex flex-col">
-                <span className="text-[#000006] text-base font-semibold leading-5 line-clamp-1">
-                  {recommendation.name}
+                <span className="text-base leading-5 line-clamp-1 flex justify-between">
+                  <span className="font-semibold text-[#000006]">{recommendation.name}</span>
+                  <span className="font-normal text-[#00000099]">{formatDateInFull(recommendation.date)}</span>
                 </span>
                 <span className="text-[#000006] text-base font-normal leading-5 line-clamp-1">
                   {recommendation.description}
@@ -36,7 +37,7 @@ export default function ListRecommendations({modal = false}: IProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {cleanURL(recommendation.link)}
+                  {recommendation.showLink ? cleanURL(recommendation.showLink) : cleanURL(recommendation.link)}
                 </a>
               </div>
               <div className="pt-3">
