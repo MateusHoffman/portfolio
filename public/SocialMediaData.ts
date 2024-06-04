@@ -19,6 +19,12 @@ export const socialMediaData = {
       showLink: 'github.com/MateusHoffman',
     },
     {
+      logo: '/whatsapp.png',
+      name: 'WhatsApp',
+      link: 'https://wa.link/48i4n6',
+      showLink: 'whatsapp.com/send',
+    },
+    {
       logo: '/instagram.png',
       name: 'Instagram',
       link: 'https://www.instagram.com/maahoffman/',
