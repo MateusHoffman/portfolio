@@ -1,5 +1,7 @@
 import moment from "moment";
 import { v4 as uuidv4 } from "uuid";
+import logoMuuAgrotech from '../../assets/images/logo_muuagrotech.jpeg'
+import logoFreelancer from '../../assets/images/logo_freelancer.jpeg'
 
 interface Position {
   id: string;
@@ -33,8 +35,7 @@ export const experienceData: ExperienceData = {
       id: uuidv4(),
       company: "MUU Agrotech",
       jobType: "Tempo integral",
-      imgLogo:
-        "https://media.licdn.com/dms/image/D4E0BAQGDIMF0chtozQ/company-logo_100_100/0/1691426534167?e=1724284800&v=beta&t=-TI6N0Wd9-4i2LEjWokI0QFkXmZ_v5DMbq-rStkXLaY",
+      imgLogo: logoMuuAgrotech.src,
       startDate: "13/03/2023",
       endDate: moment().format("DD/MM/YYYY"),
       city: "Campinas",
@@ -64,8 +65,7 @@ export const experienceData: ExperienceData = {
       id: uuidv4(),
       company: "Freelancer",
       jobType: "Freelancer",
-      imgLogo:
-        "https://media.licdn.com/dms/image/D4D0BAQFSEbmwaeNAUw/company-logo_100_100/0/1683928977056/liberoprofessionista_logo?e=1724284800&v=beta&t=B1k2uW3Cx-fYB5q15_7DFYLjnpNsWj8zV31BoHN9PVE",
+      imgLogo: logoFreelancer.src,
       startDate: "01/02/2022",
       endDate: moment().format("DD/MM/YYYY"),
       city: null,
