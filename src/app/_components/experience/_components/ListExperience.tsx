@@ -101,7 +101,6 @@ export default function ListExperience({
                           ),
                         }}
                       >
-                        {/* {formatBoldText(position.description, highlights)} */}
                       </span>
                       {!modal && (
                         <button

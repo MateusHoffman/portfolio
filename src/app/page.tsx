@@ -3,6 +3,7 @@ import Profile from "./_components/profile/Profile";
 import About from "./_components/about/About";
 import Experience from "./_components/experience/Experience";
 import Recommendation from "./_components/recommendation/Recommendation";
+import Academic from "./_components/academic/Academic";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Profile />
         <About />
         <Experience />
+        <Academic />
         <Recommendation />
       </main>
     </div>
