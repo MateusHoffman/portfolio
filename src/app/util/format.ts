@@ -63,7 +63,7 @@ export function formatTxtLocation(experience: Experience): string {
 }
 
 export function boldWordsInText(text: string, wordsToBold: string[]): string {
-  const boldedText = text.replace(
+  const boldedText = text.replace(/\n/g, '<br />').replace(
     new RegExp(wordsToBold.join("|"), "gi"),
     (matched) => `<span class="font-semibold">${matched}</span>`
   );
@@ -94,6 +94,7 @@ export const formatTextWithLineBreaks = (text: string): React.ReactNode[] => {
     }
   });
 
+  console.log('elements:', elements)
   return elements;
 };
 

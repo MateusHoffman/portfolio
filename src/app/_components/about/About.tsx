@@ -13,10 +13,9 @@ export default function About() {
   }
 
   const wordsToBold = [
-    "Front-End",
-    "mobile",
-    "web",
-    "dois anos",
+    "desenvolvedor pleno",
+    "Front-End mobile e web",
+    "dois anos de experiência profissional",
     "soft skills",
     "JavaScript",
     "TypeScript",

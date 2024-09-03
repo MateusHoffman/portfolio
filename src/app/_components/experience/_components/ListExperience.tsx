@@ -1,4 +1,5 @@
 import {
+  boldWordsInText,
   formatDate,
   formatDateRange,
   formatTxtLocation,
@@ -15,6 +16,36 @@ export default function ListExperience({
   handleSeeMore,
   modal = false,
 }: IProps) {
+  const highlights = [
+    "integrei uma câmera",
+    "inteligência artificial",
+    "Implementei um mapa",
+    "rotas otimizadas",
+    '"offline first"',
+    " sincronizando automaticamente os dados",
+    "componentes genéricos",
+    "arquitetura limpa ",
+    "design pattern",
+    "tipagem",
+    "estabilidade",
+    "consistência",
+    "Singleton",
+    "evitar conflitos",
+    "decorators",
+    " testes unitários",
+    "Git",
+    "TypeScript",
+    "React Native,",
+    "Jest",
+    "projetos responsivos",
+    "desempenho",
+    "Figma",
+    "websites responsivos",
+    "React.js,",
+    "Implementei APIs RESTful",
+    "desenvolvi algoritmos eficientes para processamento de dados",
+  ];
+
   return (
     <>
       {experienceData.experiences.map((experience, index) => (
@@ -63,8 +94,14 @@ export default function ListExperience({
                           modal ? "" : "line-clamp-2"
                         }`}
                         style={{ whiteSpace: "pre-line" }}
+                        dangerouslySetInnerHTML={{
+                          __html: boldWordsInText(
+                            position.description,
+                            highlights
+                          ),
+                        }}
                       >
-                        {position.description}
+                        {/* {formatBoldText(position.description, highlights)} */}
                       </span>
                       {!modal && (
                         <button

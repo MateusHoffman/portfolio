@@ -1,7 +1,7 @@
 import moment from "moment";
 import { v4 as uuidv4 } from "uuid";
-import logoMuuAgrotech from '../../assets/images/logo_muuagrotech.jpeg'
-import logoFreelancer from '../../assets/images/logo_freelancer.jpeg'
+import logoMuuAgrotech from "../../assets/images/logo_muuagrotech.jpeg";
+import logoFreelancer from "../../assets/images/logo_freelancer.jpeg";
 
 interface Position {
   id: string;
@@ -48,16 +48,23 @@ export const experienceData: ExperienceData = {
           title: "Desenvolvedor de aplicativos móveis Pleno",
           startDate: "13/07/2023",
           endDate: moment().format("DD/MM/YYYY"),
-          description: `Participei do desenvolvimento do app Muu Biometria, onde integrei uma câmera com inteligência artificial para reconhecimento biométrico e implementei uma funcionalidade de mapeamento para o cadastro de pastos. Também contribuí para o aplicativo Muu Cargo, implementando um mapa com rotas otimizadas para minimizar o tempo de viagem e reduzir o impacto nos animais, todos os apps seguem o paradigma "offline first".
-          \nHabilidades usadas: Git, TypeScript, React Native, Realm...`,
+          description: `● Desenvolvi e integrei uma câmera com um sistema de inteligência artificial para realizar o reconhecimento biométrico de animais.
+● Implementei um mapa para renderizar rotas otimizadas, minimizando o tempo de viagem e reduzindo o impacto nos animais transportados.
+● Implementei a abordagem "offline first" nos apps, garantindo seu funcionamento perfeito mesmo sem conexão à internet, e sincronizando automaticamente os dados quando a conexão é restabelecida.
+● Criei componentes genéricos para simplificar o código, seguindo arquitetura limpa e design pattern, visando facilitar a manutenção.
+● Utilizei fortemente a tipagem do TypeScript para detectar e prevenir erros, garantindo estabilidade e consistência no aplicativo.
+● Usei Singleton em certas áreas do app para evitar conflitos de dados, garantindo a única instância de objetos.
+● Utilizei decorators para melhorar a modularidade e a extensibilidade do código.
+● Implementei testes unitários que garantiram a funcionalidade correta e a integridade do código.
+● Stacks usadas: Git, TypeScript, React Native, Jest, Realm…`,
         },
         {
           id: uuidv4(),
           title: "Desenvolvedor Full-Stack Júnior",
           startDate: "13/03/2023",
           endDate: "13/07/2023",
-          description: `Desenvolvi projetos responsivos com foco em desempenho, seguindo o Figma.
-          \nHabilidades usadas: Git, JavaScript, TypeScript, React.js, Figma, RESTful APIs, Jest, ContextAPI, Node, Express, NoSQL...`,
+          description: `● Desenvolvi projetos responsivos com foco em desempenho, seguindo o Figma.
+● Stacks usadas: Git, JavaScript, TypeScript, React.js, Figma, RESTful APIs, Jest, Context API, Node, Express, NoSQL, Appwrite…`,
         },
       ],
     },
@@ -78,8 +85,9 @@ export const experienceData: ExperienceData = {
           title: "Desenvolvedor Web",
           startDate: "01/02/2022",
           endDate: moment().format("DD/MM/YYYY"),
-          description: `Desenvolvi websites responsivos com excelente desempenho, utilizando práticas avançadas de front-end e focando na experiência do usuário. Além disso, implementei APIs RESTful robustas e desenvolvi algoritmos eficientes para processamento de dados.
-          \nHabilidades usadas: Git, JavaScript, TypeScript, React.js, Next.js, TaildWind, RESTful APIs, Jest, React Testing Library, Redux, ContextAPI, Node, Express, SQL, NoSQL, Docker, Docker compose, Dockerfile...`,
+          description: `● Desenvolvi websites responsivos com excelente desempenho, utilizando práticas avançadas de front-end e focando na experiência do usuário.
+● Implementei APIs RESTful robustas e desenvolvi algoritmos eficientes para processamento de dados.
+● Stacks usadas: Git, JavaScript, TypeScript, React.js, Next.js, TailWind, RESTful APIs, HTML, CSS, Jest, React Testing Library, Redux, Context API, Node, Express, SQL, NoSQL, Docker, Docker compose, Dockerfile, Figma…`,
         },
       ],
     },
