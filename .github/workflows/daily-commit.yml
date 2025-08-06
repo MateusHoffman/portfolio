@@ -1,0 +1,28 @@
+name: Daily Commit
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # roda todo dia às 12h UTC (~9h no Brasil)
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Atualizar arquivo com data atual
+        run: |
+          echo "Último commit: $(date -u) - $RANDOM" > daily.txt
+
+      - name: Commit e push
+        run: |
+          git add daily.txt
+          git commit -m "commit automático diário: $(date -u)" || echo "Nada para commitar"
+          git push
