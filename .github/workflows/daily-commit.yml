@@ -3,6 +3,7 @@ name: Daily Commit
 on:
   schedule:
     - cron: '0 12 * * *' # roda todo dia às 12h UTC (~9h no Brasil)
+  workflow_dispatch:
 
 jobs:
   commit:
