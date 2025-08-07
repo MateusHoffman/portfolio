@@ -3,7 +3,7 @@ name: Daily Commit
 on:
   schedule:
     - cron: '0 12 * * *' # roda todo dia às 12h UTC (~9h no Brasil)
-  workflow_dispatch:
+  workflow_dispatch: # permite execução manual
 
 jobs:
   commit:
@@ -12,6 +12,15 @@ jobs:
     steps:
       - name: Clonar o repositório
         uses: actions/checkout@v4
+
+      - name: Verificar se o token está disponível
+        run: |
+          if [ -z "${{ secrets.PAT_TOKEN }}" ]; then
+            echo "❌ PAT_TOKEN não está disponível! Verifique os segredos do repositório."
+            exit 1
+          else
+            echo "✅ PAT_TOKEN foi carregado corretamente."
+          fi
 
       - name: Configurar Git
         run: |
@@ -22,12 +31,15 @@ jobs:
         run: |
           echo "Último commit: $(date -u) - $RANDOM" > daily.txt
 
-      - name: Commit e push
+      - name: Configurar URL do repositório com token
         env:
           TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
-          git add daily.txt
-          git commit -m "commit automático diário: $(date -u)" || echo "Nada para commitar"
-          git push
+          echo "✔️ URL do repositório configurada com token."
 
+      - name: Commit e push
+        run: |
+          git add daily.txt
+          git commit -m "commit automático diário: $(date -u)" || echo "ℹ️ Nada para commitar"
+          git push
