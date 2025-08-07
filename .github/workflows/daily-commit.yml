@@ -22,7 +22,11 @@ jobs:
           echo "Último commit: $(date -u) - $RANDOM" > daily.txt
 
       - name: Commit e push
+        env:
+          TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add daily.txt
           git commit -m "commit automático diário: $(date -u)" || echo "Nada para commitar"
           git push
+
