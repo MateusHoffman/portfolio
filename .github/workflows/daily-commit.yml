@@ -3,7 +3,7 @@ name: Daily Commit
 on:
   schedule:
     - cron: '0 12 * * *' # roda todo dia às 12h UTC (~9h no Brasil)
-  workflow_dispatch: # permite execução manual
+  workflow_dispatch:
 
 jobs:
   commit:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Clonar o repositório
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # 👈 Impede sobrescrita da auth
 
       - name: Verificar se o token está disponível
         run: |
@@ -36,7 +38,7 @@ jobs:
           TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
-          echo "✔️ URL do repositório configurada com token."
+          git remote -v
 
       - name: Commit e push
         run: |
