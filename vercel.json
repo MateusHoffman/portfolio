@@ -1,0 +1,15 @@
+{
+  "buildCommand": "yarn build",
+  "installCommand": "yarn install --frozen-lockfile --network-timeout 300000",
+  "framework": "nextjs",
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+}
